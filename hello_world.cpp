@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//Calcula el promedio
 float promedio(int a, int b, int c) {
     return (a + b + c) / 3;
 }
