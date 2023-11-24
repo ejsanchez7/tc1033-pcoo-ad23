@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include "Direccion.h"
 
 using namespace std;
 
@@ -17,29 +18,28 @@ class Dueno {
 
     private:
         string nombre;
-        string direccion;
+        Direccion direccion;
         string telefono;
     public:
         // Constructores
         Dueno();
-        Dueno(string _nombre, string _direccion, string _telefono);
+        Dueno(string _nombre, Direccion _direccion, string _telefono);
         // Getters
         string getNombre();
-        string getDireccion();
+        Direccion getDireccion();
         string getTelefono();
         // Setters
         void setNombre(string _nombre);
-        void setDireccion(string _direccion);
+        void setDireccion(Direccion _direccion);
         void setTelefono(string _telefono);
 };
 
 Dueno::Dueno() {
     nombre = "";
-    direccion = "";
     telefono = "";
 }
 
-Dueno::Dueno(string _nombre, string _direccion, string _telefono) {
+Dueno::Dueno(string _nombre, Direccion _direccion, string _telefono) {
     nombre = _nombre;
     direccion = _direccion;
     telefono = _telefono;
@@ -48,7 +48,7 @@ Dueno::Dueno(string _nombre, string _direccion, string _telefono) {
 string Dueno::getNombre() {
     return nombre;
 };
-string Dueno::getDireccion() {
+Direccion Dueno::getDireccion() {
     return direccion;
 };
 string Dueno::getTelefono() {
@@ -58,7 +58,7 @@ string Dueno::getTelefono() {
 void Dueno::setNombre(string _nombre) {
     nombre = _nombre;
 };
-void Dueno::setDireccion(string _direccion) {
+void Dueno::setDireccion(Direccion _direccion) {
     direccion = _direccion;
 };
 void Dueno::setTelefono(string _telefono) {
